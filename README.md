@@ -4,7 +4,7 @@ Este é o frontend da aplicação LockIt!, um sistema de autenticação com logi
 
 Foi desenvolvido com Angular e utiliza `SessionStorage` para armazenar o token de autenticação e controlar o acesso à tela protegida.
 
-🔐 Backend disponível em: [lockit-backend](https://github.com/seu-usuario/lockit-backend)
+🔐 Backend disponível em: [lockit-backend](https://github.com/MarceloCabral98sp/jwt-auth-backend)
 
 ---
 
