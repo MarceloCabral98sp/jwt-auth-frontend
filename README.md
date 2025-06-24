@@ -14,7 +14,6 @@ Foi desenvolvido com Angular e utiliza `SessionStorage` para armazenar o token d
 - TypeScript
 - SessionStorage (para manter o token JWT)
 - Angular Router
-- Estilização básica (ex: Angular Material – se aplicável)
 
 ---
 
