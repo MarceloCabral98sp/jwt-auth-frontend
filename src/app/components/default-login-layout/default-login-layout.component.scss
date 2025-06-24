@@ -7,6 +7,10 @@ main {
   justify-content: center;
   height: 100%;
 
+  @media (max-width: 959px) {
+      display: block;
+  }
+
   section {
     height: 100%;
     display: flex;
@@ -19,6 +23,10 @@ main {
     background-color: $gray-bg;
     gap: 8px;
     flex-grow: 1;
+
+    @media (max-width: 959px) {
+      display: none;
+    }
   }
 
   .form-section {

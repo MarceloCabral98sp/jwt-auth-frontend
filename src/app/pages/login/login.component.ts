@@ -6,6 +6,11 @@ import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
 import { ToastrService } from 'ngx-toastr';
 
+interface LoginForm {
+  email: FormControl,
+  password: FormControl
+}
+
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -16,7 +21,7 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class LoginComponent implements OnInit{
 
-  public loginForm!: FormGroup;
+  public loginForm!: FormGroup<LoginForm>;
 
   constructor(private router: Router, private loginService: LoginService, private toastService: ToastrService) {}
 
@@ -33,7 +38,11 @@ export class LoginComponent implements OnInit{
 
   submit() {
     this.loginService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe({
-      next: () => this.toastService.success("Login feito com sucesso"),
+      next: (res) => {
+        console.log(res),
+        this.toastService.success("Login feito com sucesso")
+        this.router.navigate(['user']);
+      },
       error: () => this.toastService.error("Erro inesperado! Tente novamente mais tarde")
     });
   }
